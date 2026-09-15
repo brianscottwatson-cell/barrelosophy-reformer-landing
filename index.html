@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Pilates Reformer | barrelosophy — Grand Junction</title>
+  <meta name="description" content="Private 60-minute Pilates Reformer sessions in Downtown Grand Junction. One-on-one at barrelosophy, Suite 102 on Main Street. Book Tue, Thu, or Sun." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brown: #413A38;
+      --taupe: #AB7260;
+      --burgundy: #74262C;
+      --deep: #361215;
+      --rose: #AF968C;
+      --peach: #E0A390;
+      --cream: #EBE0D5;
+      --white: #FFFFFF;
+      --coral: #EA492E;
+      --soft: #F7F1EA;
+      --line: rgba(65, 58, 56, 0.12);
+      --shadow: 0 18px 50px rgba(65, 58, 56, 0.08);
+      --max: 1080px;
+      --sans: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+      --radius-photo: 18px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--brown);
+      background: var(--cream);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--taupe); text-decoration: none; }
+    a:hover { color: var(--coral); }
+    img { max-width: 100%; display: block; }
+
+
+    .site-header {
+      /* document top only — not sticky (was covering mid-page photos on scroll) */
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 90;
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .logo {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.65rem;
+      letter-spacing: 0.04em;
+      color: var(--peach);
+      text-transform: lowercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+      font-size: 0.92rem;
+    }
+    .nav-links a { color: var(--brown); }
+    .nav-links a:hover { color: var(--taupe); }
+    .nav-cta {
+      display: inline-block;
+      background: var(--burgundy);
+      color: var(--white) !important;
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .nav-cta:hover { background: var(--coral); color: var(--white) !important; transform: translateY(-1px); }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .hero {
+      background: linear-gradient(165deg, var(--white) 0%, var(--soft) 55%, var(--cream) 100%);
+      padding: 3.5rem 0 3.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero-copy { text-align: left; }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+      color: var(--brown);
+      margin-bottom: 0.85rem;
+    }
+    .hero-meta {
+      font-size: 1.05rem;
+      color: var(--rose);
+      margin-bottom: 0.65rem;
+    }
+    .hero-price {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      color: var(--brown);
+      margin-bottom: 1.75rem;
+    }
+    .hero-price .draft-tag {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-left: 0.35rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: flex-start;
+    }
+    .hero-photo {
+      border-radius: var(--radius-photo);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 3 / 4;
+      background: var(--soft);
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    @media (max-width: 800px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+      .hero-copy { text-align: center; }
+      .hero-actions { justify-content: center; }
+      .hero-photo { aspect-ratio: 4 / 5; max-height: 420px; margin: 0 auto; width: min(100%, 380px); }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: var(--burgundy);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--brown);
+      border: 1px solid var(--rose);
+    }
+    .btn-ghost:hover {
+      border-color: var(--burgundy);
+      color: var(--taupe);
+    }
+
+    section { padding: 4rem 0; }
+    .section-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(1.85rem, 3.5vw, 2.4rem);
+      text-transform: lowercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+      color: var(--brown);
+    }
+    .lead {
+      font-size: 1.15rem;
+      max-width: 40rem;
+      color: var(--brown);
+      opacity: 0.92;
+    }
+    .muted { color: rgba(65,58,56,0.72); }
+
+    .offer { background: var(--white); }
+    .inclusions {
+      list-style: none;
+      margin-top: 1.75rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+    @media (max-width: 700px) {
+      .inclusions { grid-template-columns: 1fr; }
+    }
+    .inclusions li {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      padding: 1.15rem 1.2rem;
+      background: var(--soft);
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .inclusions .mark {
+      flex-shrink: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background: var(--burgundy);
+      color: var(--white);
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.15rem;
+    }
+    .inclusions strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: lowercase;
+      color: var(--taupe);
+      margin-bottom: 0.2rem;
+    }
+    .inclusions span { font-size: 0.92rem; color: rgba(65,58,56,0.85); }
+
+    .photo-strip {
+      background: var(--white);
+      padding: 0 0 3.5rem;
+    }
+    .photo-strip .wrap { padding-top: 0; }
+    .strip-wide {
+      border-radius: var(--radius-photo);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.25rem;
+      /* 16/11 — room for Brittany's face (21/9 was clipping her head) */
+      aspect-ratio: 16 / 11;
+      background: var(--soft);
+    }
+    .strip-wide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 28%;
+    }
+    @media (max-width: 700px) {
+      .strip-wide { aspect-ratio: 3 / 2; }
+    }
+
+    .how { background: var(--cream); }
+    .how-layout {
+      margin-top: 1.5rem;
+    }
+    .terms-list {
+      list-style: none;
+      display: grid;
+      gap: 0.9rem;
+    }
+    .terms-list li {
+      display: grid;
+      grid-template-columns: 2.2rem 1fr;
+      gap: 0.75rem;
+      align-items: start;
+      padding: 1rem 1.1rem;
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .terms-list .num {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--taupe);
+      line-height: 1;
+    }
+
+    .packages {
+      background: linear-gradient(180deg, var(--soft), var(--cream));
+    }
+    .packages-layout {
+      margin-top: 1.75rem;
+    }
+    .ladder {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.15rem;
+    }
+    @media (max-width: 800px) {
+      .ladder { grid-template-columns: 1fr; }
+    }
+    .pack-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .pack-card.featured {
+      border-color: var(--burgundy);
+      box-shadow: 0 18px 50px rgba(116, 38, 44, 0.12);
+    }
+    .pack-card .label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+    .pack-card h3 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+      text-transform: lowercase;
+      margin-bottom: 0.35rem;
+      color: var(--brown);
+    }
+    .pack-card .amount {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      line-height: 1;
+      color: var(--brown);
+      margin: 0.5rem 0 0.65rem;
+    }
+    .pack-card .amount span {
+      font-size: 0.95rem;
+      color: var(--rose);
+      margin-left: 0.2rem;
+    }
+    .pack-card p { font-size: 0.9rem; color: rgba(65,58,56,0.8); flex-grow: 1; }
+    .pack-card .btn { margin-top: 1.15rem; text-align: center; }
+
+    .why { background: var(--white); }
+    .why-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+    .why-copy .section-title { margin-bottom: 0.85rem; }
+    .why .lead {
+      font-style: italic;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.55;
+      max-width: 38rem;
+    }
+    .why-photo {
+      border-radius: var(--radius-photo);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5;
+      background: var(--soft);
+    }
+    .why-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+    @media (max-width: 800px) {
+      .why-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .why-photo {
+        max-width: 380px;
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    .faq { background: var(--soft); }
+    details {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 500;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      color: var(--taupe);
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+    details[open] summary::after { content: "–"; }
+    details p {
+      margin-top: 0.75rem;
+      color: rgba(65,58,56,0.85);
+      font-size: 0.95rem;
+    }
+
+    .where { background: var(--white); }
+    .nap-box {
+      margin-top: 1.25rem;
+      padding: 1.4rem 1.5rem;
+      background: var(--cream);
+      border-radius: 16px;
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.98rem;
+      max-width: 420px;
+    }
+    .nap-box strong { font-weight: 600; }
+
+    .cta-band {
+      background: var(--brown);
+      color: var(--cream);
+      text-align: center;
+      padding: 4rem 0;
+    }
+    .cta-band h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      text-transform: lowercase;
+      margin-bottom: 0.75rem;
+      color: var(--peach);
+    }
+    .cta-band p { max-width: 32rem; margin: 0 auto 1.5rem; opacity: 0.9; }
+    .cta-band .btn-primary { background: var(--burgundy); }
+    .cta-band .btn-primary:hover { background: var(--coral); }
+
+    footer {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 0 2rem;
+      font-size: 0.92rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 700px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .nav-links .hide-sm { display: none; }
+    }
+    footer .logo { font-size: 1.4rem; margin-bottom: 0.5rem; display: inline-block; }
+    footer .tiny {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.78rem;
+      color: rgba(65,58,56,0.55);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="logo" href="https://www.barrelosophy.com">barrelosophy</a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li class="hide-sm"><a href="#packages">Packages</a></li>
+          <li class="hide-sm"><a href="#faq">FAQ</a></li>
+          <li><a class="nav-cta" href="https://www.barrelosophy.com/book-online">Book Reformer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. THE OFFER -->
+    <section class="hero" id="offer">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">the offer</p>
+          <h1>Private Pilates Reformer</h1>
+          <p class="hero-meta">60 min · one-on-one · Downtown GJ · Suite 102</p>
+          <p class="hero-price">from $52 / session</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://www.barrelosophy.com/book-online">Book</a>
+            <a class="btn btn-ghost" href="#packages">See packages</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img
+            src="photos/02-0J1A5356.jpg"
+            srcset="photos/02-0J1A5356-sm.jpg 900w, photos/02-0J1A5356.jpg 1600w"
+            sizes="(max-width: 800px) 90vw, 480px"
+            alt="Instructor guiding a client on a wooden Pilates reformer during a private session"
+            width="1600"
+            height="2399"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. What you get -->
+    <section class="offer" id="inclusions">
+      <div class="wrap">
+        <h2 class="section-title">what’s in the offer</h2>
+        <p class="lead muted">A full private session on the Pilates reformer — built around you.</p>
+        <ul class="inclusions">
+          <li>
+            <span class="mark" aria-hidden="true">✓</span>
+            <div>
+              <strong>reformer machine</strong>
+              <span>Your session is on the Pilates reformer — carriage, straps, and spring resistance.</span>
+            </div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">✓</span>
+            <div>
+              <strong>spring resistance</strong>
+              <span>Springs set to your level so every movement is controlled, precise, and progressive.</span>
+            </div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">✓</span>
+            <div>
+              <strong>private cues</strong>
+              <span>One-on-one coaching — posture, breath, and alignment cues tailored to you.</span>
+            </div>
+          </li>
+          <li>
+            <span class="mark" aria-hidden="true">✓</span>
+            <div>
+              <strong>60 minutes</strong>
+              <span>A full hour dedicated to your Private Pilates Reformer session.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. How the offer works -->
+    <section class="how" id="how">
+      <div class="wrap">
+        <h2 class="section-title">how this offer works</h2>
+        <p class="lead muted">Offer terms for Private Pilates Reformer — not a general studio overview.</p>
+        <div class="how-layout">
+          <ul class="terms-list">
+            <li>
+              <span class="num">01</span>
+              <div><strong>Book Tue / Thu / Sun</strong><br />Private reformer availability as shown on the barrelosophy homepage.</div>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <div><strong>Instructor</strong><br />Emily Grossnickle — Pilates Reformer Instructor (as listed on the team page).</div>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <div><strong>Cancellation</strong><br />Please contact us at least 24 hours before your session.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo strip: landscape only -->
+    <section class="photo-strip" aria-label="Studio photos">
+      <div class="wrap">
+        <div class="strip-wide">
+          <img
+            src="photos/07-untitled-1180-wide-sm.jpg"
+            srcset="photos/07-untitled-1180-wide-sm.jpg 900w, photos/07-untitled-1180-wide.jpg 1600w"
+            sizes="(max-width: 1080px) 100vw, 1080px"
+            alt="Studio owner cueing a client during a private Pilates reformer session"
+            width="1600"
+            height="1099"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Offer ladder / packages -->
+    <section class="packages" id="packages">
+      <div class="wrap">
+        <h2 class="section-title">packages</h2>
+        <p class="lead muted">Choose a single session or save with a pack.</p>
+        <div class="packages-layout">
+          <div class="ladder">
+            <article class="pack-card featured">
+              <p class="label">single session</p>
+              <h3>private reformer</h3>
+              <p class="amount">$52<span>/ 60 min</span></p>
+              <p>One Private Pilates Reformer session · Downtown GJ Suite 102</p>
+              <a class="btn btn-primary" href="https://www.barrelosophy.com/book-online">Book</a>
+            </article>
+            <article class="pack-card">
+              <p class="label">5-pack</p>
+              <h3>private reformer</h3>
+              <p class="amount">$240</p>
+              <p>Five 60-min Private Pilates Reformer sessions · valid 3 months</p>
+              <a class="btn btn-ghost" href="https://www.barrelosophy.com/plans-pricing">View on plans</a>
+            </article>
+            <article class="pack-card">
+              <p class="label">10-pack</p>
+              <h3>private reformer</h3>
+              <p class="amount">$470</p>
+              <p>Ten Private Pilates Reformer sessions · valid 12 months</p>
+              <a class="btn btn-ghost" href="https://www.barrelosophy.com/plans-pricing">View on plans</a>
+            </article>
+          </div>
+          <p class="muted" style="margin-top:1rem;font-size:0.88rem;">
+            Current options:
+            <a href="https://www.barrelosophy.com/plans-pricing">Plans &amp; Pricing</a>
+            ·
+            <a href="https://www.barrelosophy.com/service-page/private-reformer">Private Reformer</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Why reformer (short, about THIS offer) -->
+    <section class="why" id="why">
+      <div class="wrap">
+        <div class="why-layout">
+          <div class="why-copy">
+            <h2 class="section-title">why this offer</h2>
+            <p class="lead">
+              Private reformer Pilates isn’t about intensity — it’s about intention.
+              On the reformer, every spring, breath, and alignment cue is tailored to you —
+              so you leave stronger, more centered, and more connected to how your body moves.
+            </p>
+          </div>
+          <figure class="why-photo">
+            <img
+              src="photos/08-untitled-1189-sm.jpg"
+              srcset="photos/08-untitled-1189-sm.jpg 900w, photos/08-untitled-1189.jpg 1600w"
+              sizes="(max-width: 800px) 90vw, 420px"
+              alt="Studio owner cueing a client during a private Pilates reformer session"
+              width="900"
+              height="1349"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FAQ — reformer offer only -->
+    <section class="faq" id="faq">
+      <div class="wrap" style="max-width:760px;margin:0 auto;">
+        <h2 class="section-title">faq</h2>
+        <details open>
+          <summary>I’ve never done reformer — is this offer okay for first-timers?</summary>
+          <p>Yes. Your Private Pilates Reformer session is paced for you. Your instructor will introduce the reformer, springs, and foundational movements so you feel supported from the first session.</p>
+        </details>
+        <details>
+          <summary>What should I wear to my Private Reformer session?</summary>
+          <p>Comfortable, fitted athletic wear you can move in. Grip socks are helpful on the reformer carriage. Arrive a few minutes early so you can settle in.</p>
+        </details>
+        <details>
+          <summary>What’s the cancellation policy for this offer?</summary>
+          <p>Please contact us at least 24 hours before your private reformer session if you need to cancel or reschedule.</p>
+        </details>
+        <details>
+          <summary>How is Private Reformer different from barre?</summary>
+          <p>Private reformer is one-on-one on the Pilates reformer machine — individualized cues, spring resistance, and personal focus for 60 minutes. Barre at barrelosophy is a separate small-group studio class format.</p>
+        </details>
+        <details>
+          <summary>When can I book this offer?</summary>
+          <p>Private reformer is offered Tue / Thu / Sun (per the homepage). Book online or start from the Private Reformer service page.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 7. Where you take the offer -->
+    <section class="where" id="where">
+      <div class="wrap">
+        <h2 class="section-title">where you’ll train</h2>
+        <div class="nap-box">
+          <div><strong>barrelosophy</strong></div>
+          <div>634 Main Street, Suite 102</div>
+          <div>Grand Junction, CO 81501</div>
+          <div><a href="tel:9702015585">970-201-5585</a> · <a href="mailto:barrelosophy@gmail.com">barrelosophy@gmail.com</a></div>
+          <div><a href="https://www.barrelosophy.com">www.barrelosophy.com</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Final CTA -->
+    <section class="cta-band" id="book">
+      <div class="wrap">
+        <h2>book your private reformer</h2>
+        <p>Reserve your Private Pilates Reformer session — 60 min, one-on-one, Suite 102.</p>
+        <a class="btn btn-primary" href="https://www.barrelosophy.com/book-online">Book Private Reformer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo" href="https://www.barrelosophy.com">barrelosophy</a>
+        <p class="muted">Private Pilates Reformer · Suite 102</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong></p>
+        <p>634 Main Street, Suite 102<br />Grand Junction, CO 81501</p>
+        <p><a href="tel:9702015585">970-201-5585</a><br />
+          <a href="mailto:barrelosophy@gmail.com">barrelosophy@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="wrap tiny">
+      © barrelosophy
+    </div>
+  </footer>
+</body>
+</html>
